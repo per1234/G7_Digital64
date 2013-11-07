@@ -1,5 +1,5 @@
 /*!
- * @file G7_Digital64.cpp
+ * @file G7_Digital64.h
  * @author Takuya Urakawa (galileo-7.com)
  * @license MIT Licence
  * 

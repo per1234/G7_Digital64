@@ -23,14 +23,9 @@
 const uint8_t G7_Digital64::i2cAddress[2][4] = {{0x20,0x24,0x22,0x26},{0x21,0x25,0x23,0x27}};
 
 // constructor
-G7_Digital64::G7_Digital64(uint8_t _addr){
-	addr = _addr;
-	for(uint8_t i=0;i<4;i++){
-		for(uint8_t j=0;j<2;j++){
-			config[i][j] = 0xFF;
-			output[i][j] = 0xFF;
-		}
-	}
+G7_Digital64::G7_Digital64(uint8_t _addr)
+ : addr(_addr)
+{
 }
 
 // private methods
@@ -46,6 +41,7 @@ inline int16_t G7_Digital64::i2cRead(uint8_t _addr, uint8_t _cmd){
 	int16_t ret = -1;
 	Wire.beginTransmission(i2cAddress[addr][_addr]);
 	Wire.write(_cmd);
+	Wire.endTransmission();
 	Wire.requestFrom(i2cAddress[addr][_addr], (uint8_t)1);
 	if(Wire.available()){
 		ret = Wire.read();
@@ -64,6 +60,12 @@ inline uint8_t* G7_Digital64::calcPin(uint8_t _pin){
 // public methods
 
 void G7_Digital64::init(void){
+	for(uint8_t i=0;i<4;i++){
+		for(uint8_t j=0;j<2;j++){
+			config[i][j] = 0xFF;
+			output[i][j] = 0xFF;
+		}
+	}
 	for(uint8_t ic=0;ic<4;ic++){
 		for(uint8_t port=0;port<2;port++){
 			setConfig(ic, port, 0xFF);
@@ -116,7 +118,7 @@ void G7_Digital64::digitalWrite(uint8_t _ic, uint8_t _pin, uint8_t _value){
 uint8_t G7_Digital64::digitalRead(uint8_t _ic, uint8_t _port, uint8_t _pin){
 	uint16_t tempInput = portRead(_ic, _port);
 	if(tempInput == -1) return NULL;
-	return (tempInput && (0x01 << _pin));
+	return ((tempInput & (0x01 << _pin)) == 0 ? 0:1);
 }
 
 uint8_t G7_Digital64::digitalRead(uint8_t _ic, uint8_t _pin){
