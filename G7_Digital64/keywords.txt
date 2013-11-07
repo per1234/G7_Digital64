@@ -1,0 +1,33 @@
+#######################################
+# Syntax Coloring Map For G7_Digital64
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+G7_Digital64.h  KEYWORD1
+G7_Digital64  KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+init  KEYWORD2
+setConfig   KEYWORD2
+setPolarity   KEYWORD2
+portWrite  KEYWORD2
+portRead  KEYWORD2
+pinMode  KEYWORD2
+digitalWrite  KEYWORD2
+digitalRead  KEYWORD2
+
+#######################################
+# Instances (KEYWORD2)
+#######################################
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+DIO_A  LITERAL1
+DIO_B  LITERAL1
+DIO_C  LITERAL1
+DIO_D  LITERAL1
