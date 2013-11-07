@@ -10,6 +10,16 @@
  * v1.0 - First release
 */
 
+ /*!
+  * @mainpage
+  * 
+  * ガリレオセブンにて販売中のI2C 64Digital-IOs "大盛り" ShieldのArduino用ライブラリです。<br>
+  * I2Cで通信し、それぞれ個別に入出力の指定ができるデジタルIOを64ピン追加します。<br>
+  * <br>
+  * 詳しくは以下クラスのリファレンスを参照して下さい。
+  * - G7_Digital64
+ */
+
 #ifndef G7_DIGITAL64_H
 #define G7_DIGITAL64_H
 
@@ -28,6 +38,7 @@
 
 //!	4つのI2C IO Expander ICをコントロールして64本のデジタルIOを追加します
 //! @note このシールドを2枚使用したいときは基板上のADDR_SELで選択するアドレスをそれぞれ変えること
+//! @note ICの名前には DIO_A / DIO_B / DIO_C / DIO_D が使用できます。
 class G7_Digital64 {
 	public:
 
