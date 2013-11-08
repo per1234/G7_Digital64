@@ -103,15 +103,24 @@ Public メソッド</h2></td></tr>
 <tr class="memitem:abc8c4261f939cbe7e9a2783c9b53c613"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g7___digital64.html#abc8c4261f939cbe7e9a2783c9b53c613">setConfig</a> (uint8_t _ic, uint8_t _port, uint8_t _data)</td></tr>
 <tr class="memdesc:abc8c4261f939cbe7e9a2783c9b53c613"><td class="mdescLeft">&#160;</td><td class="mdescRight">CONFIGレジスタに書き込む 1ポート分のピンの設定を入力か出力に設定する  <a href="#abc8c4261f939cbe7e9a2783c9b53c613">[詳細]</a><br/></td></tr>
 <tr class="separator:abc8c4261f939cbe7e9a2783c9b53c613"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5fb7b1be25cc311eae654f910334ff4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g7___digital64.html#ad5fb7b1be25cc311eae654f910334ff4">setConfigAll</a> (uint8_t _ic, uint16_t _data)</td></tr>
+<tr class="memdesc:ad5fb7b1be25cc311eae654f910334ff4"><td class="mdescLeft">&#160;</td><td class="mdescRight">CONFIGレジスタに書き込む 全てのピンの設定を入力か出力に設定する  <a href="#ad5fb7b1be25cc311eae654f910334ff4">[詳細]</a><br/></td></tr>
+<tr class="separator:ad5fb7b1be25cc311eae654f910334ff4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60f02254f0fd3d84961c99de055203c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g7___digital64.html#a60f02254f0fd3d84961c99de055203c2">setPolarity</a> (uint8_t _ic, uint8_t _port, uint8_t _data)</td></tr>
 <tr class="memdesc:a60f02254f0fd3d84961c99de055203c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">INPUT POLARITYレジスタに書き込む 入力ピンの極性を変更する  <a href="#a60f02254f0fd3d84961c99de055203c2">[詳細]</a><br/></td></tr>
 <tr class="separator:a60f02254f0fd3d84961c99de055203c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79086f428d9a38689d71038414050ae7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g7___digital64.html#a79086f428d9a38689d71038414050ae7">portWrite</a> (uint8_t _ic, uint8_t _port, uint8_t _data)</td></tr>
 <tr class="memdesc:a79086f428d9a38689d71038414050ae7"><td class="mdescLeft">&#160;</td><td class="mdescRight">OUTPUTレジスタに直接書き込む ポート毎に出力を設定する  <a href="#a79086f428d9a38689d71038414050ae7">[詳細]</a><br/></td></tr>
 <tr class="separator:a79086f428d9a38689d71038414050ae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a000cd97a83b8fac24fa0d62dd52491bc"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g7___digital64.html#a000cd97a83b8fac24fa0d62dd52491bc">portRead</a> (uint8_t _ic, uint8_t _port)</td></tr>
-<tr class="memdesc:a000cd97a83b8fac24fa0d62dd52491bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">INPUTレジスタを直接読み込む ポート毎に入力を取得する  <a href="#a000cd97a83b8fac24fa0d62dd52491bc">[詳細]</a><br/></td></tr>
-<tr class="separator:a000cd97a83b8fac24fa0d62dd52491bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaa91ea86e43b5d0f5e43d3e53fcb06a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g7___digital64.html#acaa91ea86e43b5d0f5e43d3e53fcb06a">portWriteAll</a> (uint8_t _ic, uint16_t _data)</td></tr>
+<tr class="memdesc:acaa91ea86e43b5d0f5e43d3e53fcb06a"><td class="mdescLeft">&#160;</td><td class="mdescRight">OUTPUTレジスタに書き込む 全てのピンの出力を書き込む  <a href="#acaa91ea86e43b5d0f5e43d3e53fcb06a">[詳細]</a><br/></td></tr>
+<tr class="separator:acaa91ea86e43b5d0f5e43d3e53fcb06a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55778fc0a8e683e1345a3321f32558f1"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g7___digital64.html#a55778fc0a8e683e1345a3321f32558f1">portRead</a> (uint8_t _ic, uint8_t _port)</td></tr>
+<tr class="memdesc:a55778fc0a8e683e1345a3321f32558f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">INPUTレジスタを直接読み込む ポート毎に入力を取得する  <a href="#a55778fc0a8e683e1345a3321f32558f1">[詳細]</a><br/></td></tr>
+<tr class="separator:a55778fc0a8e683e1345a3321f32558f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9ef498a46ec36e6f4d53a62b412fa0c"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g7___digital64.html#af9ef498a46ec36e6f4d53a62b412fa0c">portReadAll</a> (uint8_t _ic)</td></tr>
+<tr class="memdesc:af9ef498a46ec36e6f4d53a62b412fa0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">INPUTレジスタを直接読み込む 入力に指定された全てのピンを読み込む  <a href="#af9ef498a46ec36e6f4d53a62b412fa0c">[詳細]</a><br/></td></tr>
+<tr class="separator:af9ef498a46ec36e6f4d53a62b412fa0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af34304bf601331a977f2b5d620e1514c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g7___digital64.html#af34304bf601331a977f2b5d620e1514c">pinMode</a> (uint8_t _ic, uint8_t _port, uint8_t _pin, uint8_t _value)</td></tr>
 <tr class="memdesc:af34304bf601331a977f2b5d620e1514c"><td class="mdescLeft">&#160;</td><td class="mdescRight">ピンの設定を入力か出力に設定する  <a href="#af34304bf601331a977f2b5d620e1514c">[詳細]</a><br/></td></tr>
 <tr class="separator:af34304bf601331a977f2b5d620e1514c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,7 +144,7 @@ Public メソッド</h2></td></tr>
 <div class="textblock"><p>4つのI2C IO Expander ICをコントロールして64本のデジタルIOを追加します </p>
 <dl class="section note"><dt>覚え書き</dt><dd>このシールドを2枚使用したいときは基板上のADDR_SELで選択するアドレスをそれぞれ変えること </dd>
 <dd>
-ICの名前には DIO_A / DIO_B / DIO_C / DIO_D が使用できます。 </dd></dl>
+IC番号には DIO_A / DIO_B / DIO_C / DIO_D が使用できます。 </dd></dl>
 </div><h2 class="groupheader">コンストラクタとデストラクタ</h2>
 <a class="anchor" id="a22e2d77071423f34c839592350958d26"></a>
 <div class="memitem">
@@ -195,13 +204,14 @@ ICの名前には DIO_A / DIO_B / DIO_C / DIO_D が使用できます。 </dd></
 <p>指定したピンの状態(HIGH/LOW)を取得する </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">_ic</td><td>ICの名前 </td></tr>
+    <tr><td class="paramname">_ic</td><td>IC番号 </td></tr>
     <tr><td class="paramname">_port</td><td>ポート番号(0か1) </td></tr>
     <tr><td class="paramname">_pin</td><td>ピン番号(0-8) </td></tr>
     <tr><td class="paramname">_value</td><td>HIGH/LOWの指定 </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>戻り値</dt><dd>ピンの状態 </dd></dl>
 
 </div>
 </div>
@@ -232,11 +242,12 @@ ICの名前には DIO_A / DIO_B / DIO_C / DIO_D が使用できます。 </dd></
 <p>指定したピンの状態(HIGH/LOW)を取得する _portを指定しない </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">_ic</td><td>ICの名前 </td></tr>
+    <tr><td class="paramname">_ic</td><td>IC番号 </td></tr>
     <tr><td class="paramname">_pin</td><td>ピン番号(0-16) </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>戻り値</dt><dd>ピンの状態 </dd></dl>
 
 </div>
 </div>
@@ -279,7 +290,7 @@ ICの名前には DIO_A / DIO_B / DIO_C / DIO_D が使用できます。 </dd></
 <p>HIGH/LOWを指定したピンから出力する </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">_ic</td><td>ICの名前 </td></tr>
+    <tr><td class="paramname">_ic</td><td>IC番号 </td></tr>
     <tr><td class="paramname">_port</td><td>ポート番号(0か1) </td></tr>
     <tr><td class="paramname">_pin</td><td>ピン番号(0-8) </td></tr>
     <tr><td class="paramname">_value</td><td>HIGH/LOWの指定 </td></tr>
@@ -322,7 +333,7 @@ ICの名前には DIO_A / DIO_B / DIO_C / DIO_D が使用できます。 </dd></
 <p>HIGH/LOWを指定したピンから出力する _portを指定しない </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">_ic</td><td>ICの名前 </td></tr>
+    <tr><td class="paramname">_ic</td><td>IC番号 </td></tr>
     <tr><td class="paramname">_pin</td><td>ピン番号(0-16) </td></tr>
     <tr><td class="paramname">_value</td><td>HIGH/LOWの指定 </td></tr>
   </table>
@@ -390,7 +401,7 @@ ICの名前には DIO_A / DIO_B / DIO_C / DIO_D が使用できます。 </dd></
 <p>ピンの設定を入力か出力に設定する </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">_ic</td><td>ICの名前 </td></tr>
+    <tr><td class="paramname">_ic</td><td>IC番号 </td></tr>
     <tr><td class="paramname">_port</td><td>ポート番号(0か1) </td></tr>
     <tr><td class="paramname">_pin</td><td>ピン番号(0-8) </td></tr>
     <tr><td class="paramname">_value</td><td>OUTPUT/INPUTの指定 </td></tr>
@@ -433,7 +444,7 @@ ICの名前には DIO_A / DIO_B / DIO_C / DIO_D が使用できます。 </dd></
 <p>ピンの設定を入力か出力に設定する ポートを指定しない </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">_ic</td><td>ICの名前 </td></tr>
+    <tr><td class="paramname">_ic</td><td>IC番号 </td></tr>
     <tr><td class="paramname">_pin</td><td>ピン番号(0-16) </td></tr>
     <tr><td class="paramname">_value</td><td>OUTPUT/INPUTの指定 </td></tr>
   </table>
@@ -442,12 +453,12 @@ ICの名前には DIO_A / DIO_B / DIO_C / DIO_D が使用できます。 </dd></
 
 </div>
 </div>
-<a class="anchor" id="a000cd97a83b8fac24fa0d62dd52491bc"></a>
+<a class="anchor" id="a55778fc0a8e683e1345a3321f32558f1"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t G7_Digital64::portRead </td>
+          <td class="memname">uint8_t G7_Digital64::portRead </td>
           <td>(</td>
           <td class="paramtype">uint8_t&#160;</td>
           <td class="paramname"><em>_ic</em>, </td>
@@ -469,12 +480,37 @@ ICの名前には DIO_A / DIO_B / DIO_C / DIO_D が使用できます。 </dd></
 <p>INPUTレジスタを直接読み込む ポート毎に入力を取得する </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">_ic</td><td>ICの名前 </td></tr>
+    <tr><td class="paramname">_ic</td><td>IC番号 </td></tr>
     <tr><td class="paramname">_port</td><td>ポート番号(0か1) </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>覚え書き</dt><dd>0:出力　1:入力（Arduinoとは反転） </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>入力の状態 [port.7][port.6]...[port.1][port.0]の8ビット </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af9ef498a46ec36e6f4d53a62b412fa0c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t G7_Digital64::portReadAll </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_ic</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>INPUTレジスタを直接読み込む 入力に指定された全てのピンを読み込む </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_ic</td><td>IC番号 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>入力の状態 [0.1][0.2]...[0.7][1.0]...[1.7]の16ビット </dd></dl>
 
 </div>
 </div>
@@ -511,9 +547,44 @@ ICの名前には DIO_A / DIO_B / DIO_C / DIO_D が使用できます。 </dd></
 <p>OUTPUTレジスタに直接書き込む ポート毎に出力を設定する </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">_ic</td><td>ICの名前 </td></tr>
+    <tr><td class="paramname">_ic</td><td>IC番号 </td></tr>
     <tr><td class="paramname">_port</td><td>ポート番号(0か1) </td></tr>
     <tr><td class="paramname">_data</td><td>設定するデータ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="acaa91ea86e43b5d0f5e43d3e53fcb06a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void G7_Digital64::portWriteAll </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_ic</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>OUTPUTレジスタに書き込む 全てのピンの出力を書き込む </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_ic</td><td>IC番号 </td></tr>
+    <tr><td class="paramname">_data</td><td>設定するデータ [0.1][0.2]...[0.7][1.0]...[1.7]の16ビットで指定 </td></tr>
   </table>
   </dd>
 </dl>
@@ -553,9 +624,45 @@ ICの名前には DIO_A / DIO_B / DIO_C / DIO_D が使用できます。 </dd></
 <p>CONFIGレジスタに書き込む 1ポート分のピンの設定を入力か出力に設定する </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">_ic</td><td>ICの名前 </td></tr>
+    <tr><td class="paramname">_ic</td><td>IC番号 </td></tr>
     <tr><td class="paramname">_port</td><td>ポート番号(0か1) </td></tr>
     <tr><td class="paramname">_data</td><td>設定するデータ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section attention"><dt>注意</dt><dd>出力に設定した場合、OUTPUTレジスタに指定されている値が即時に反映される </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad5fb7b1be25cc311eae654f910334ff4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void G7_Digital64::setConfigAll </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>_ic</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CONFIGレジスタに書き込む 全てのピンの設定を入力か出力に設定する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_ic</td><td>IC番号 </td></tr>
+    <tr><td class="paramname">_data</td><td>設定するデータ [0.1][0.2]...[0.7][1.0]...[1.7]の16ビットで指定 </td></tr>
   </table>
   </dd>
 </dl>
@@ -596,7 +703,7 @@ ICの名前には DIO_A / DIO_B / DIO_C / DIO_D が使用できます。 </dd></
 <p>INPUT POLARITYレジスタに書き込む 入力ピンの極性を変更する </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">_ic</td><td>ICの名前 </td></tr>
+    <tr><td class="paramname">_ic</td><td>IC番号 </td></tr>
     <tr><td class="paramname">_port</td><td>ポート番号(0か1) </td></tr>
     <tr><td class="paramname">_data</td><td>設定するデータ </td></tr>
   </table>
@@ -612,7 +719,7 @@ ICの名前には DIO_A / DIO_B / DIO_C / DIO_D が使用できます。 </dd></
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-G7_Digital64に対してFri Nov 8 2013 06:01:34に生成されました。 &#160;<a href="http://www.doxygen.org/index.html">
+G7_Digital64に対してFri Nov 8 2013 22:58:44に生成されました。 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

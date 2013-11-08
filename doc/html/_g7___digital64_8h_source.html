@@ -111,61 +111,75 @@ var searchBox = new SearchBox("searchBox", "search",false,'検索');
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_g7___digital64.html#abc8c4261f939cbe7e9a2783c9b53c613">setConfig</a>(uint8_t _ic, uint8_t _port, uint8_t _data);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_g7___digital64.html#a60f02254f0fd3d84961c99de055203c2">setPolarity</a>(uint8_t _ic, uint8_t _port, uint8_t _data);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_g7___digital64.html#ad5fb7b1be25cc311eae654f910334ff4">setConfigAll</a>(uint8_t _ic, uint16_t _data);</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_g7___digital64.html#a79086f428d9a38689d71038414050ae7">portWrite</a>(uint8_t _ic, uint8_t _port, uint8_t _data);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_g7___digital64.html#a60f02254f0fd3d84961c99de055203c2">setPolarity</a>(uint8_t _ic, uint8_t _port, uint8_t _data);</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        uint16_t <a class="code" href="class_g7___digital64.html#a000cd97a83b8fac24fa0d62dd52491bc">portRead</a>(uint8_t _ic, uint8_t _port);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_g7___digital64.html#a79086f428d9a38689d71038414050ae7">portWrite</a>(uint8_t _ic, uint8_t _port, uint8_t _data);</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_g7___digital64.html#af34304bf601331a977f2b5d620e1514c">pinMode</a>(uint8_t _ic, uint8_t _port, uint8_t _pin, uint8_t _value);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_g7___digital64.html#af34304bf601331a977f2b5d620e1514c">pinMode</a>(uint8_t _ic, uint8_t _pin, uint8_t _value);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_g7___digital64.html#afa583b8fbf783f1cd5abcbf412ccaa95">digitalWrite</a>(uint8_t _ic, uint8_t _port, uint8_t _pin, uint8_t _value);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_g7___digital64.html#acaa91ea86e43b5d0f5e43d3e53fcb06a">portWriteAll</a>(uint8_t _ic, uint16_t _data);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        uint8_t <a class="code" href="class_g7___digital64.html#a55778fc0a8e683e1345a3321f32558f1">portRead</a>(uint8_t _ic, uint8_t _port);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        uint16_t <a class="code" href="class_g7___digital64.html#af9ef498a46ec36e6f4d53a62b412fa0c">portReadAll</a>(uint8_t _ic);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_g7___digital64.html#afa583b8fbf783f1cd5abcbf412ccaa95">digitalWrite</a>(uint8_t _ic, uint8_t _pin, uint8_t _value);</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        uint8_t <a class="code" href="class_g7___digital64.html#a9edc99593940caef34f2e889f30d1613">digitalRead</a>(uint8_t _ic, uint8_t _port, uint8_t _pin);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_g7___digital64.html#af34304bf601331a977f2b5d620e1514c">pinMode</a>(uint8_t _ic, uint8_t _port, uint8_t _pin, uint8_t _value);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_g7___digital64.html#af34304bf601331a977f2b5d620e1514c">pinMode</a>(uint8_t _ic, uint8_t _pin, uint8_t _value);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        uint8_t <a class="code" href="class_g7___digital64.html#a9edc99593940caef34f2e889f30d1613">digitalRead</a>(uint8_t _ic, uint8_t _pin);</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        uint8_t addr;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keyword">static</span> <span class="keyword">const</span> uint8_t i2cAddress[2][4];</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        uint8_t output[4][2];</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        uint8_t config[4][2];</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> i2cSend(uint8_t _addr, uint8_t _cmd, uint8_t _data);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_g7___digital64.html#afa583b8fbf783f1cd5abcbf412ccaa95">digitalWrite</a>(uint8_t _ic, uint8_t _port, uint8_t _pin, uint8_t _value);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_g7___digital64.html#afa583b8fbf783f1cd5abcbf412ccaa95">digitalWrite</a>(uint8_t _ic, uint8_t _pin, uint8_t _value);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keyword">inline</span> int16_t i2cRead(uint8_t _addr, uint8_t _cmd);</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keyword">inline</span> uint8_t* calcPin(uint8_t _pin);</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;};</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="class_g7___digital64_html_a79086f428d9a38689d71038414050ae7"><div class="ttname"><a href="class_g7___digital64.html#a79086f428d9a38689d71038414050ae7">G7_Digital64::portWrite</a></div><div class="ttdeci">void portWrite(uint8_t _ic, uint8_t _port, uint8_t _data)</div><div class="ttdoc">OUTPUTレジスタに直接書き込む ポート毎に出力を設定する </div><div class="ttdef"><b>Definition:</b> G7_Digital64.cpp:87</div></div>
-<div class="ttc" id="class_g7___digital64_html_a000cd97a83b8fac24fa0d62dd52491bc"><div class="ttname"><a href="class_g7___digital64.html#a000cd97a83b8fac24fa0d62dd52491bc">G7_Digital64::portRead</a></div><div class="ttdeci">uint16_t portRead(uint8_t _ic, uint8_t _port)</div><div class="ttdoc">INPUTレジスタを直接読み込む ポート毎に入力を取得する </div><div class="ttdef"><b>Definition:</b> G7_Digital64.cpp:92</div></div>
-<div class="ttc" id="class_g7___digital64_html_abc8c4261f939cbe7e9a2783c9b53c613"><div class="ttname"><a href="class_g7___digital64.html#abc8c4261f939cbe7e9a2783c9b53c613">G7_Digital64::setConfig</a></div><div class="ttdeci">void setConfig(uint8_t _ic, uint8_t _port, uint8_t _data)</div><div class="ttdoc">CONFIGレジスタに書き込む 1ポート分のピンの設定を入力か出力に設定する </div><div class="ttdef"><b>Definition:</b> G7_Digital64.cpp:78</div></div>
-<div class="ttc" id="class_g7___digital64_html_a73b64b7108c6210b38dfdfcad62cd7e8"><div class="ttname"><a href="class_g7___digital64.html#a73b64b7108c6210b38dfdfcad62cd7e8">G7_Digital64::init</a></div><div class="ttdeci">void init(void)</div><div class="ttdoc">全てのIOを初期化する </div><div class="ttdef"><b>Definition:</b> G7_Digital64.cpp:62</div></div>
-<div class="ttc" id="class_g7___digital64_html_a9edc99593940caef34f2e889f30d1613"><div class="ttname"><a href="class_g7___digital64.html#a9edc99593940caef34f2e889f30d1613">G7_Digital64::digitalRead</a></div><div class="ttdeci">uint8_t digitalRead(uint8_t _ic, uint8_t _port, uint8_t _pin)</div><div class="ttdoc">指定したピンの状態(HIGH/LOW)を取得する </div><div class="ttdef"><b>Definition:</b> G7_Digital64.cpp:118</div></div>
-<div class="ttc" id="class_g7___digital64_html_afa583b8fbf783f1cd5abcbf412ccaa95"><div class="ttname"><a href="class_g7___digital64.html#afa583b8fbf783f1cd5abcbf412ccaa95">G7_Digital64::digitalWrite</a></div><div class="ttdeci">void digitalWrite(uint8_t _ic, uint8_t _port, uint8_t _pin, uint8_t _value)</div><div class="ttdoc">HIGH/LOWを指定したピンから出力する </div><div class="ttdef"><b>Definition:</b> G7_Digital64.cpp:107</div></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        uint8_t <a class="code" href="class_g7___digital64.html#a9edc99593940caef34f2e889f30d1613">digitalRead</a>(uint8_t _ic, uint8_t _port, uint8_t _pin);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        uint8_t <a class="code" href="class_g7___digital64.html#a9edc99593940caef34f2e889f30d1613">digitalRead</a>(uint8_t _ic, uint8_t _pin);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        uint8_t addr;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keyword">static</span> <span class="keyword">const</span> uint8_t i2cAddress[2][4];</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        uint8_t output[4][2];</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        uint8_t config[4][2];</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> i2cSend(uint8_t _addr, uint8_t _cmd, uint8_t _data);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> i2cSend2Bytes(uint8_t _addr, uint8_t _cmd, uint16_t _data);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="keyword">inline</span> uint16_t i2cRead2Bytes(uint8_t _addr, uint8_t _cmd);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <span class="keyword">inline</span> uint8_t* calcPin(uint8_t _pin);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;};</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_g7___digital64_html_a79086f428d9a38689d71038414050ae7"><div class="ttname"><a href="class_g7___digital64.html#a79086f428d9a38689d71038414050ae7">G7_Digital64::portWrite</a></div><div class="ttdeci">void portWrite(uint8_t _ic, uint8_t _port, uint8_t _data)</div><div class="ttdoc">OUTPUTレジスタに直接書き込む ポート毎に出力を設定する </div><div class="ttdef"><b>Definition:</b> G7_Digital64.cpp:101</div></div>
+<div class="ttc" id="class_g7___digital64_html_ad5fb7b1be25cc311eae654f910334ff4"><div class="ttname"><a href="class_g7___digital64.html#ad5fb7b1be25cc311eae654f910334ff4">G7_Digital64::setConfigAll</a></div><div class="ttdeci">void setConfigAll(uint8_t _ic, uint16_t _data)</div><div class="ttdoc">CONFIGレジスタに書き込む 全てのピンの設定を入力か出力に設定する </div><div class="ttdef"><b>Definition:</b> G7_Digital64.cpp:91</div></div>
+<div class="ttc" id="class_g7___digital64_html_af9ef498a46ec36e6f4d53a62b412fa0c"><div class="ttname"><a href="class_g7___digital64.html#af9ef498a46ec36e6f4d53a62b412fa0c">G7_Digital64::portReadAll</a></div><div class="ttdeci">uint16_t portReadAll(uint8_t _ic)</div><div class="ttdoc">INPUTレジスタを直接読み込む 入力に指定された全てのピンを読み込む </div><div class="ttdef"><b>Definition:</b> G7_Digital64.cpp:118</div></div>
+<div class="ttc" id="class_g7___digital64_html_abc8c4261f939cbe7e9a2783c9b53c613"><div class="ttname"><a href="class_g7___digital64.html#abc8c4261f939cbe7e9a2783c9b53c613">G7_Digital64::setConfig</a></div><div class="ttdeci">void setConfig(uint8_t _ic, uint8_t _port, uint8_t _data)</div><div class="ttdoc">CONFIGレジスタに書き込む 1ポート分のピンの設定を入力か出力に設定する </div><div class="ttdef"><b>Definition:</b> G7_Digital64.cpp:86</div></div>
+<div class="ttc" id="class_g7___digital64_html_a73b64b7108c6210b38dfdfcad62cd7e8"><div class="ttname"><a href="class_g7___digital64.html#a73b64b7108c6210b38dfdfcad62cd7e8">G7_Digital64::init</a></div><div class="ttdeci">void init(void)</div><div class="ttdoc">全てのIOを初期化する </div><div class="ttdef"><b>Definition:</b> G7_Digital64.cpp:70</div></div>
+<div class="ttc" id="class_g7___digital64_html_a9edc99593940caef34f2e889f30d1613"><div class="ttname"><a href="class_g7___digital64.html#a9edc99593940caef34f2e889f30d1613">G7_Digital64::digitalRead</a></div><div class="ttdeci">uint8_t digitalRead(uint8_t _ic, uint8_t _port, uint8_t _pin)</div><div class="ttdoc">指定したピンの状態(HIGH/LOW)を取得する </div><div class="ttdef"><b>Definition:</b> G7_Digital64.cpp:144</div></div>
+<div class="ttc" id="class_g7___digital64_html_afa583b8fbf783f1cd5abcbf412ccaa95"><div class="ttname"><a href="class_g7___digital64.html#afa583b8fbf783f1cd5abcbf412ccaa95">G7_Digital64::digitalWrite</a></div><div class="ttdeci">void digitalWrite(uint8_t _ic, uint8_t _port, uint8_t _pin, uint8_t _value)</div><div class="ttdoc">HIGH/LOWを指定したピンから出力する </div><div class="ttdef"><b>Definition:</b> G7_Digital64.cpp:133</div></div>
 <div class="ttc" id="class_g7___digital64_html"><div class="ttname"><a href="class_g7___digital64.html">G7_Digital64</a></div><div class="ttdoc">4つのI2C IO Expander ICをコントロールして64本のデジタルIOを追加します </div><div class="ttdef"><b>Definition:</b> G7_Digital64.h:42</div></div>
-<div class="ttc" id="class_g7___digital64_html_af34304bf601331a977f2b5d620e1514c"><div class="ttname"><a href="class_g7___digital64.html#af34304bf601331a977f2b5d620e1514c">G7_Digital64::pinMode</a></div><div class="ttdeci">void pinMode(uint8_t _ic, uint8_t _port, uint8_t _pin, uint8_t _value)</div><div class="ttdoc">ピンの設定を入力か出力に設定する </div><div class="ttdef"><b>Definition:</b> G7_Digital64.cpp:96</div></div>
-<div class="ttc" id="class_g7___digital64_html_a60f02254f0fd3d84961c99de055203c2"><div class="ttname"><a href="class_g7___digital64.html#a60f02254f0fd3d84961c99de055203c2">G7_Digital64::setPolarity</a></div><div class="ttdeci">void setPolarity(uint8_t _ic, uint8_t _port, uint8_t _data)</div><div class="ttdoc">INPUT POLARITYレジスタに書き込む 入力ピンの極性を変更する </div><div class="ttdef"><b>Definition:</b> G7_Digital64.cpp:83</div></div>
+<div class="ttc" id="class_g7___digital64_html_acaa91ea86e43b5d0f5e43d3e53fcb06a"><div class="ttname"><a href="class_g7___digital64.html#acaa91ea86e43b5d0f5e43d3e53fcb06a">G7_Digital64::portWriteAll</a></div><div class="ttdeci">void portWriteAll(uint8_t _ic, uint16_t _data)</div><div class="ttdoc">OUTPUTレジスタに書き込む 全てのピンの出力を書き込む </div><div class="ttdef"><b>Definition:</b> G7_Digital64.cpp:106</div></div>
+<div class="ttc" id="class_g7___digital64_html_af34304bf601331a977f2b5d620e1514c"><div class="ttname"><a href="class_g7___digital64.html#af34304bf601331a977f2b5d620e1514c">G7_Digital64::pinMode</a></div><div class="ttdeci">void pinMode(uint8_t _ic, uint8_t _port, uint8_t _pin, uint8_t _value)</div><div class="ttdoc">ピンの設定を入力か出力に設定する </div><div class="ttdef"><b>Definition:</b> G7_Digital64.cpp:122</div></div>
+<div class="ttc" id="class_g7___digital64_html_a60f02254f0fd3d84961c99de055203c2"><div class="ttname"><a href="class_g7___digital64.html#a60f02254f0fd3d84961c99de055203c2">G7_Digital64::setPolarity</a></div><div class="ttdeci">void setPolarity(uint8_t _ic, uint8_t _port, uint8_t _data)</div><div class="ttdoc">INPUT POLARITYレジスタに書き込む 入力ピンの極性を変更する </div><div class="ttdef"><b>Definition:</b> G7_Digital64.cpp:97</div></div>
 <div class="ttc" id="class_g7___digital64_html_a22e2d77071423f34c839592350958d26"><div class="ttname"><a href="class_g7___digital64.html#a22e2d77071423f34c839592350958d26">G7_Digital64::G7_Digital64</a></div><div class="ttdeci">G7_Digital64(uint8_t _addr=0)</div><div class="ttdoc">コンストラクタ </div><div class="ttdef"><b>Definition:</b> G7_Digital64.cpp:26</div></div>
+<div class="ttc" id="class_g7___digital64_html_a55778fc0a8e683e1345a3321f32558f1"><div class="ttname"><a href="class_g7___digital64.html#a55778fc0a8e683e1345a3321f32558f1">G7_Digital64::portRead</a></div><div class="ttdeci">uint8_t portRead(uint8_t _ic, uint8_t _port)</div><div class="ttdoc">INPUTレジスタを直接読み込む ポート毎に入力を取得する </div><div class="ttdef"><b>Definition:</b> G7_Digital64.cpp:112</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-G7_Digital64に対してFri Nov 8 2013 06:01:34に生成されました。 &#160;<a href="http://www.doxygen.org/index.html">
+G7_Digital64に対してFri Nov 8 2013 22:58:44に生成されました。 &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>
