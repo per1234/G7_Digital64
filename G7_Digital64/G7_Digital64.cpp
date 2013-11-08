@@ -37,14 +37,22 @@ inline void G7_Digital64::i2cSend(uint8_t _addr, uint8_t _cmd, uint8_t _data){
 	Wire.endTransmission();
 }
 
-inline int16_t G7_Digital64::i2cRead(uint8_t _addr, uint8_t _cmd){
-	int16_t ret = -1;
+inline void G7_Digital64::i2cSend2Bytes(uint8_t _addr, uint8_t _cmd, uint16_t _data){
+	Wire.beginTransmission(i2cAddress[addr][_addr]);
+	Wire.write(_cmd);
+	Wire.write(_data >> 8);
+	Wire.write(_data & 0xFF);
+	Wire.endTransmission();
+}
+
+inline uint16_t G7_Digital64::i2cRead2Bytes(uint8_t _addr, uint8_t _cmd){
+	uint16_t ret = NULL;
 	Wire.beginTransmission(i2cAddress[addr][_addr]);
 	Wire.write(_cmd);
 	Wire.endTransmission();
-	Wire.requestFrom(i2cAddress[addr][_addr], (uint8_t)1);
+	Wire.requestFrom(i2cAddress[addr][_addr], (uint8_t)2);
 	if(Wire.available()){
-		ret = Wire.read();
+		ret = (Wire.read() << 8) + Wire.read();
 	}
 	return ret;
 }
@@ -80,6 +88,12 @@ void G7_Digital64::setConfig(uint8_t _ic, uint8_t _port, uint8_t _data){
 	i2cSend(_ic, PCA9655_REG_CONFIG + _port, _data);
 }
 
+void G7_Digital64::setConfigAll(uint8_t _ic, uint16_t _data){
+	config[_ic][0] = _data >> 8;
+	config[_ic][1] = _data & 0xFF;
+	i2cSend2Bytes(_ic, PCA9655_REG_CONFIG, _data);
+}
+
 void G7_Digital64::setPolarity(uint8_t _ic, uint8_t _port, uint8_t _data){
 	i2cSend(_ic, PCA9655_REG_POLARITY + _port, _data);
 }
@@ -89,8 +103,20 @@ void G7_Digital64::portWrite(uint8_t _ic, uint8_t _port, uint8_t _data){
 	i2cSend(_ic, PCA9655_REG_OUTPUT + _port, _data);
 }
 
-uint16_t G7_Digital64::portRead(uint8_t _ic, uint8_t _port){
-	return i2cRead(_ic, PCA9655_REG_INPUT + _port);
+void G7_Digital64::portWriteAll(uint8_t _ic, uint16_t _data){
+	output[_ic][0] = _data >> 8;
+	output[_ic][1] = _data & 0xFF;
+	i2cSend2Bytes(_ic, PCA9655_REG_OUTPUT, _data);
+}
+
+uint8_t G7_Digital64::portRead(uint8_t _ic, uint8_t _port){
+	if(_port == 0) return (i2cRead2Bytes(_ic, PCA9655_REG_INPUT)>>8);
+	else if(_port == 1) return (i2cRead2Bytes(_ic, PCA9655_REG_INPUT) & 0xFF);
+	else return NULL;
+}
+
+uint16_t G7_Digital64::portReadAll(uint8_t _ic){
+	return i2cRead2Bytes(_ic, PCA9655_REG_INPUT);
 }
 
 void G7_Digital64::pinMode(uint8_t _ic, uint8_t _port, uint8_t _pin, uint8_t _value){

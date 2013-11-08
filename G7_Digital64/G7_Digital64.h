@@ -26,7 +26,7 @@
 #include "Arduino.h"
 
 /*===========================================================================*/
-//! ICの名前
+//! IC番号
 //! IC番号の代りに使用する定数
 
 #define DIO_A (0)
@@ -38,7 +38,7 @@
 
 //!	4つのI2C IO Expander ICをコントロールして64本のデジタルIOを追加します
 //! @note このシールドを2枚使用したいときは基板上のADDR_SELで選択するアドレスをそれぞれ変えること
-//! @note ICの名前には DIO_A / DIO_B / DIO_C / DIO_D が使用できます。
+//! @note IC番号には DIO_A / DIO_B / DIO_C / DIO_D が使用できます。
 class G7_Digital64 {
 	public:
 
@@ -57,17 +57,26 @@ class G7_Digital64 {
 		//! CONFIGレジスタに書き込む
 		//! 1ポート分のピンの設定を入力か出力に設定する
 		/**   
-		 * @param _ic ICの名前
+		 * @param _ic IC番号
 		 * @param _port ポート番号(0か1)
 		 * @param _data 設定するデータ
 		 * @attention 出力に設定した場合、OUTPUTレジスタに指定されている値が即時に反映される
 		 */
 		void setConfig(uint8_t _ic, uint8_t _port, uint8_t _data);
 
+		//! CONFIGレジスタに書き込む
+		//! 全てのピンの設定を入力か出力に設定する
+		/**   
+		 * @param _ic IC番号
+		 * @param _data 設定するデータ [0.1][0.2]...[0.7][1.0]...[1.7]の16ビットで指定
+		 * @attention 出力に設定した場合、OUTPUTレジスタに指定されている値が即時に反映される
+		 */
+		void setConfigAll(uint8_t _ic, uint16_t _data);
+
 		//! INPUT POLARITYレジスタに書き込む
 		//! 入力ピンの極性を変更する
 		/**
-		 * @param _ic ICの名前
+		 * @param _ic IC番号
 		 * @param _port ポート番号(0か1)
 		 * @param _data 設定するデータ
 		 */
@@ -76,25 +85,41 @@ class G7_Digital64 {
 		//! OUTPUTレジスタに直接書き込む
 		//! ポート毎に出力を設定する
 		/**
-		 * @param _ic ICの名前
+		 * @param _ic IC番号
 		 * @param _port ポート番号(0か1)
 		 * @param _data 設定するデータ
 		 */
 		void portWrite(uint8_t _ic, uint8_t _port, uint8_t _data);
 
+		//! OUTPUTレジスタに書き込む
+		//! 全てのピンの出力を書き込む
+		/**   
+		 * @param _ic IC番号
+		 * @param _data 設定するデータ [0.1][0.2]...[0.7][1.0]...[1.7]の16ビットで指定
+		 */
+		void portWriteAll(uint8_t _ic, uint16_t _data);
+
 		//! INPUTレジスタを直接読み込む
 		//! ポート毎に入力を取得する
 		/**
-		 * @param _ic ICの名前
+		 * @param _ic IC番号
 		 * @param _port ポート番号(0か1)
-		 * @note 0:出力　1:入力（Arduinoとは反転）
+		 * @return 入力の状態 [port.7][port.6]...[port.1][port.0]の8ビット
 		 */
-		uint16_t portRead(uint8_t _ic, uint8_t _port);
+		uint8_t portRead(uint8_t _ic, uint8_t _port);
+
+		//! INPUTレジスタを直接読み込む
+		//! 入力に指定された全てのピンを読み込む
+		/**   
+		 * @param _ic IC番号
+		 * @return 入力の状態 [0.1][0.2]...[0.7][1.0]...[1.7]の16ビット
+		 */
+		uint16_t portReadAll(uint8_t _ic);
 
 		//! ピンの設定を入力か出力に設定する
 		//! 
 		/**
-		 * @param _ic ICの名前
+		 * @param _ic IC番号
 		 * @param _port ポート番号(0か1)
 		 * @param _pin ピン番号(0-8)
 		 * @param _value OUTPUT/INPUTの指定
@@ -104,7 +129,7 @@ class G7_Digital64 {
 		//! ピンの設定を入力か出力に設定する
 		//! ポートを指定しない
 		/**
-		 * @param _ic ICの名前
+		 * @param _ic IC番号
 		 * @param _pin ピン番号(0-16)
 		 * @param _value OUTPUT/INPUTの指定
 		 */
@@ -112,7 +137,7 @@ class G7_Digital64 {
 
 	    //! HIGH/LOWを指定したピンから出力する
 		/**
-		 * @param _ic ICの名前
+		 * @param _ic IC番号
 		 * @param _port ポート番号(0か1)
 		 * @param _pin ピン番号(0-8)
 		 * @param _value HIGH/LOWの指定
@@ -122,7 +147,7 @@ class G7_Digital64 {
 		//! HIGH/LOWを指定したピンから出力する
 		//! _portを指定しない
 		/**
-		 * @param _ic ICの名前
+		 * @param _ic IC番号
 		 * @param _pin ピン番号(0-16)
 		 * @param _value HIGH/LOWの指定
 		 */
@@ -130,18 +155,20 @@ class G7_Digital64 {
 
 		//! 指定したピンの状態(HIGH/LOW)を取得する
 		/**
-		 * @param _ic ICの名前
+		 * @param _ic IC番号
 		 * @param _port ポート番号(0か1)
 		 * @param _pin ピン番号(0-8)
 		 * @param _value HIGH/LOWの指定
+		 * @return ピンの状態
 		 */
 		uint8_t digitalRead(uint8_t _ic, uint8_t _port, uint8_t _pin);
 
 		//! 指定したピンの状態(HIGH/LOW)を取得する
 		//! _portを指定しない
 		/**
-		 * @param _ic ICの名前
+		 * @param _ic IC番号
 		 * @param _pin ピン番号(0-16)
+		 * @return ピンの状態
 		 */
 		uint8_t digitalRead(uint8_t _ic, uint8_t _pin);
 
@@ -155,9 +182,12 @@ class G7_Digital64 {
 		//! コマンドとデータをi2cで送信する
 		inline void i2cSend(uint8_t _addr, uint8_t _cmd, uint8_t _data);
 
-		//! i2cからデータを読み込む
-		//! @return 成功したら受信した値、失敗した場合は-1
-		inline int16_t i2cRead(uint8_t _addr, uint8_t _cmd);
+		//! コマンドとデータ2バイトをi2cで送信する
+		inline void i2cSend2Bytes(uint8_t _addr, uint8_t _cmd, uint16_t _data);
+
+		//! i2cからデータを2バイト読み込む
+		//! @return 成功したら受信した値、失敗した場合はNULL
+		inline uint16_t i2cRead2Bytes(uint8_t _addr, uint8_t _cmd);
 
 		//! 0-16のピン番号からポート番号とピン番号(0-8)を計算する
 		//! @return ret[0]はポート番号(0-1)、ret[1]はピン番号(0-8)
