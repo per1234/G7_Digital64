@@ -57,11 +57,9 @@ inline uint16_t G7_Digital64::i2cRead2Bytes(uint8_t _addr, uint8_t _cmd){
 	return ret;
 }
 
-inline uint8_t* G7_Digital64::calcPin(uint8_t _pin){
-	uint8_t ret[2];
-	ret[0] = _pin >> 3;
-	ret[1] = _pin - (ret[0] << 3);
-	return ret;
+inline void G7_Digital64::calcPin(uint8_t* _port,uint8_t _pin){
+	_port[0] = _pin >> 3;
+	_port[1] = _pin - (_port[0] << 3);
 }
 
 
@@ -126,7 +124,8 @@ void G7_Digital64::pinMode(uint8_t _ic, uint8_t _port, uint8_t _pin, uint8_t _va
 }
 
 void G7_Digital64::pinMode(uint8_t _ic, uint8_t _pin, uint8_t _value){
-	uint8_t* port = calcPin(_pin);
+	uint8_t port[2];
+	calcPin(port, _pin);
 	pinMode(_ic, port[0], port[1], _value);
 }
 
@@ -137,7 +136,8 @@ void G7_Digital64::digitalWrite(uint8_t _ic, uint8_t _port, uint8_t _pin, uint8_
 }
 
 void G7_Digital64::digitalWrite(uint8_t _ic, uint8_t _pin, uint8_t _value){
-	uint8_t* port = calcPin(_pin);
+	uint8_t port[2];
+	calcPin(port, _pin);
 	digitalWrite(_ic, port[0], port[1], _value);
 }
 
@@ -148,6 +148,7 @@ uint8_t G7_Digital64::digitalRead(uint8_t _ic, uint8_t _port, uint8_t _pin){
 }
 
 uint8_t G7_Digital64::digitalRead(uint8_t _ic, uint8_t _pin){
-	uint8_t* port = calcPin(_pin);
+	uint8_t port[2];
+	calcPin(port, _pin);
 	return digitalRead(_ic, port[0], port[1]);
 }

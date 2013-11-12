@@ -190,8 +190,7 @@ class G7_Digital64 {
 		inline uint16_t i2cRead2Bytes(uint8_t _addr, uint8_t _cmd);
 
 		//! 0-16のピン番号からポート番号とピン番号(0-8)を計算する
-		//! @return ret[0]はポート番号(0-1)、ret[1]はピン番号(0-8)
-		inline uint8_t* calcPin(uint8_t _pin);
+		inline void calcPin(uint8_t* _port, uint8_t _pin);
 };
 
 #endif
